@@ -12,41 +12,8 @@
     menu > ul > li{
         display: inline-block;
     }
-    img{
-        display: block;
-        margin: auto;
+    picture > img{
+        width: 90vw;
     }
+}  
 
-img#phone {display: none;}
-img#tablet {display: block;}
-img#print {display: none;}
-img#desktop {display: none;}
-img#tv {display: none;}
-}
-
-
-/*Large devices - DESKTOP */
-@media only screen and (min-width: 992px){
-    img{
-        display: block;
-        margin: auto;
-    }
-img#phone {display: none;}
-img#tablet {display: none;}
-img#print {display: none;}
-img#desktop {display: block;}
-img#tv {display: none;}
-}
-
-/*Extra large devices - TV */
-@media only screen and (min-width: 1200px) {
-    img{
-        display: block;
-        margin: auto;
-    }
-img#phone {display: none;}
-img#tablet {display: none;}
-img#print {display: none;}
-img#desktop {display: none;}
-img#tv {display: block;}
-}

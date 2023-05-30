@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 :root{
     --cor1: #DD298F;
     --cor2: #98C947;
@@ -15,9 +16,11 @@
 
 body, html{
     background-color: rgb(255, 255, 255);
+    min-height: 400px;
 }
 
 header > img{
+    width: 20vw;
     display: block;
     margin: auto;
 
@@ -33,11 +36,22 @@ span#burguer:hover{
     background-color: #DD298F;
     color: rgb(255, 255, 255);
 }
+menu#itens{
+    display: block;
+    margin: auto;
+}
+.menu{
+    text-align: center;
+}
+.menu-item{
+    display: inline-block;
+}
 menu > ul{
     list-style: none;
 }
 menu > ul > li > a{
     display: block;
+    text-align: center;
     padding: 10px;
     text-decoration: none;
     text-align: center;
@@ -49,11 +63,7 @@ menu > ul > li > a:hover{
     background-color:#DD298F ;
     color: white;
 }
-img#phone{
-    max-width: 600px;
-    display: block;
-    margin: auto;
-}
+
 main{
     width: 90vw;
     background-color: white;
@@ -62,6 +72,11 @@ main{
     padding: 10px;
     border-radius: 10px;
 
+}
+picture > img{
+    width: 70vw;
+    display: block;
+    margin: auto;
 }
 article > h1{
     padding-bottom: 20px;
@@ -73,8 +88,56 @@ article > p{
     margin-bottom: 20px;
     text-indent: 20px;
 }
-img#phone {display: block;}
-img#tablet {display: none;}
-img#print {display: none;}
-img#desktop {display: none;}
-img#tv {display: none;}
+
+.flip-container {
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+    perspective: 1000px;
+  }
+.flip-container:hover .flipper{
+	transform: rotateY(180deg);
+	/* se quiser uma animação na vertical,
+	troque por rotateX(180deg)
+	*/
+}  
+.flipper{
+    
+    position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+    
+}
+img{
+    display: block;
+    margin: auto;
+    width: 45vw;
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.back{
+	transform: rotateY(180deg);
+}
+#switch{
+	display: none;
+}
+#switch:checked ~ .flip-container .flipper {
+    transform: rotateY(180deg);
+  }
+  
+footer{
+    background-color: #DD298F;
+    border-top: 5px solid #EE7BAF;
+    padding: 8px;
+}
+footer > p{
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
