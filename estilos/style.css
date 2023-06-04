@@ -43,8 +43,8 @@ menu#itens{
 .menu{
     text-align: center;
 }
-.menu-item{
-    display: inline-block;
+.border{
+    border-right:0px;
 }
 menu > ul{
     list-style: none;
@@ -57,7 +57,7 @@ menu > ul > li > a{
     text-align: center;
     
     color: #DD298F;
-    border-right: 2px solid #EE7BAF;
+    
 }
 menu > ul > li > a:hover{
     background-color:#DD298F ;
@@ -84,53 +84,20 @@ article > h1{
     color: #DD298F;
 }
 article > p{
+    display: block;
+    margin: auto;
     text-align: center;
     margin-bottom: 20px;
     text-indent: 20px;
 }
 
-.flip-container {
-    display: inline-block;
-    width: 300px;
-    height: 250px;
-    perspective: 1000px;
-  }
-.flip-container:hover .flipper{
-	transform: rotateY(180deg);
-	/* se quiser uma animação na vertical,
-	troque por rotateX(180deg)
-	*/
-}  
-.flipper{
-    
-    position: relative;
-	width: 100%;
-	height: 100%;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-    
-}
+
 img{
     display: block;
     margin: auto;
     width: 45vw;
 }
-.front, .back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-.back{
-	transform: rotateY(180deg);
-}
-#switch{
-	display: none;
-}
-#switch:checked ~ .flip-container .flipper {
-    transform: rotateY(180deg);
-  }
-  
+
 footer{
     background-color: #DD298F;
     border-top: 5px solid #EE7BAF;

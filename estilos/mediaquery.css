@@ -15,5 +15,8 @@
     picture > img{
         width: 90vw;
     }
+    .border{
+        border-right: 2px solid #EE7BAF;
+    }
 }  
 
